@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 //  上传资源
-Route::post('wang-editor-resources', 'WangEditorResourcesController@store')->name('wang-editor-resources.store');
+Route::post('wang-editor-resources', [Controllers\WangEditorResourcesController::class, 'store'])->name('wang-editor-resources.store');
